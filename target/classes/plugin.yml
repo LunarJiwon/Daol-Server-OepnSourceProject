@@ -1,0 +1,69 @@
+name: ServerCore
+version: '1.0-SNAPSHOT'
+main: org.jiwon.serverCore.ServerCore
+api-version: '1.21'
+depend: ["floodgate","DecentHolograms","LuckPerms","FancyNpcs"]
+commands:
+  server-core:
+    description: 'coreCommand'
+    permission: server.manager
+  maintenance:
+    aliases: ['점검']
+    description: '유지보수'
+    permission: server.manager
+  balance:
+    aliases: ['돈', '통장']
+    description: '경제 명령어'
+  economy:
+    permission: server.economy
+    aliases:
+      - 상점
+      - 창조경제
+    description: '상점 명령어'
+  land:
+    aliases:
+      - 부동산
+      - 땅
+    description: '부동산 명령어'
+  warp:
+    permission: server.manager
+    aliases:
+      - 워프
+    description: '워프 명령어'
+  survival:
+    aliases:
+      - 야생
+  tpa:
+    aliases:
+      - 텔포요청
+  announce:
+    permission: server.manager
+    aliases:
+      - 공지
+  whisper:
+    aliases:
+      - 귓
+      - w
+  afk:
+    permission: server.manager
+    aliases:
+      - 잠수
+  speak:
+    aliases:
+      - 확성기
+  prefix:
+    aliases:
+      - 칭호
+  warn:
+    permission: server.manager
+    aliases:
+      - 경고
+
+
+permissions:
+  server.manager:
+    description: "서버 관리자"
+    default: op
+  server.economy:
+    description: "상점 권한"
+    default: op
